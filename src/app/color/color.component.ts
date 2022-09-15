@@ -15,9 +15,5 @@ export class ColorComponent implements OnInit {
   }
 
 
-  changeColor(input: any) {
-    console.log(input.value)
-    this.color = input.value
-    input.value = ''
-  }
+
 }
