@@ -1,4 +1,4 @@
-<app-fils [filsProperty]="color"></app-fils>
+<app-fils (sendRequesttoParent)="proccessReq($event)" [filsProperty]="color"></app-fils>
 
 <div [style.backgroundColor]="color">
 
