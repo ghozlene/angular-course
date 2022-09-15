@@ -9,4 +9,10 @@ export class AppComponent {
   title = 'courseAngular';
   bgColor = 'red'
   show = false
+
+  changeStatus = () => {
+    return (
+      this.show = !this.show
+    )
+  }
 }

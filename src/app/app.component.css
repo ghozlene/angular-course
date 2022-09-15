@@ -9,3 +9,6 @@ h2 {
 .icon {
   background-color: rgb(253, 216, 112);
 }
+.btn-danger {
+  margin-top: 2rem;
+}
