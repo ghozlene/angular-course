@@ -1,23 +1,23 @@
 export class Personne {
   id: any;
   name: any;
-  firsName: any;
+  firstName: any;
   age: any;
   path: any;
   cin: any;
   job: any;
 
   constructor(
-    id: number,
-    name: string,
-    firsName: string,
-    age: number,
-    path: string,
-    cin: number,
-    job: string,) {
+    id = 0,
+    name = '',
+    firstName = '',
+    age = 0,
+    path = '',
+    cin = 0,
+    job = '',) {
 
     this.id = id;
-    this.firsName = firsName;
+    this.firstName = firstName;
     this.name = name;
     this.age = age;
     this.path = path;
