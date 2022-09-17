@@ -8,4 +8,15 @@
 
 <br />
 
-<input type="text" class="form-control" appRainbow>
+<input *ngIf="show" type="text" class="form-control" appRainbow>
+
+<button class="btn btn-info" (click)="show = !show">Show</button>
+
+
+<ol class="list-group">
+
+  <li *ngFor="let element of team;let idx=index" class="list-group-item">
+
+    {{element}}==>with index {{idx}}
+  </li>
+</ol>

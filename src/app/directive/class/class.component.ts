@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./class.component.css']
 })
 export class ClassComponent implements OnInit {
+  team = ['est', 'psg', 'realMadrid', 'atl', 'bayren']
 
   milan = false
   barca = false
   est = false
+  show = true
   constructor() { }
 
   ngOnInit(): void {
