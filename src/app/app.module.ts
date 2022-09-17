@@ -12,7 +12,8 @@ import { CvComponent } from './cvTech/cv/cv.component';
 import { ListCvComponent } from './cvTech/list-cv/list-cv.component';
 import { ItemCvComponent } from './cvTech/item-cv/item-cv.component';
 import { DetailCvComponent } from './cvTech/detail-cv/detail-cv.component';
-import { StylesComponent } from './derective/styles/styles.component';
+import { StylesComponent } from './directive/styles/styles.component';
+import { ClassComponent } from './directive/class/class.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { StylesComponent } from './derective/styles/styles.component';
     ListCvComponent,
     ItemCvComponent,
     DetailCvComponent,
-    StylesComponent
+    StylesComponent,
+    ClassComponent
   ],
   imports: [
     BrowserModule, FormsModule
