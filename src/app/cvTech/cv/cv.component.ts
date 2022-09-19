@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirstServiceService } from 'src/app/first-service.service';
 import { Personne } from 'src/app/model/Persone';
 
 @Component({
@@ -9,7 +10,7 @@ import { Personne } from 'src/app/model/Persone';
 export class CvComponent implements OnInit {
   personnes: any;
   selectedPerson: Personne;
-  constructor() { }
+  constructor(private fService: FirstServiceService) { }
 
   ngOnInit(): void {
     this.personnes = [
@@ -18,6 +19,7 @@ export class CvComponent implements OnInit {
       new Personne(3, 'ali', 'adta', 35, '', 32568, 'test'),
     ]
 
+    this.fService.logger(this.personnes)
 
   }
   selectPerson(personne: any) {
