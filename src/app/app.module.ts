@@ -20,6 +20,7 @@ import { DefaultPipePipe } from './cvTech/default-pipe.pipe';
 import { HiringComponent } from './cvTech/hiring/hiring.component';
 import { ROUTING } from './app.routing';
 import { HeaderComponent } from './header/header.component';
+import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { HeaderComponent } from './header/header.component';
     RainbowDirective,
     DefaultPipePipe,
     HiringComponent,
-    HeaderComponent
+    HeaderComponent,
+    RouterSimulatorComponent
   ],
   imports: [
     BrowserModule, FormsModule, ROUTING
