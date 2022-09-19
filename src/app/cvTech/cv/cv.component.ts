@@ -19,8 +19,9 @@ export class CvComponent implements OnInit {
       new Personne(3, 'ali', 'adta', 35, '', 32568, 'test'),
     ]
 
-    this.fService.logger(this.personnes)
 
+    this.fService.addData('data from cv Component')
+    this.fService.logger(this.personnes)
   }
   selectPerson(personne: any) {
     this.selectedPerson = personne

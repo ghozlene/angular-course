@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { FirstServiceService } from '../first-service.service';
 
 @Component({
   selector: 'app-color',
   templateUrl: './color.component.html',
-  styleUrls: ['./color.component.css']
+  styleUrls: ['./color.component.css'],
+  providers: [FirstServiceService]
 })
 export class ColorComponent implements OnInit {
   color = 'red';
 
 
-  constructor() { }
+  constructor(private fService: FirstServiceService) { }
 
   ngOnInit(): void {
   }
@@ -17,5 +19,7 @@ export class ColorComponent implements OnInit {
   proccessReq(message: any) {
     console.log(message)
   }
-
+  loggerMyData() {
+    this.fService.logger('test')
+  }
 }
