@@ -5,6 +5,7 @@ import { CvComponent } from "./cvTech/cv/cv.component";
 import { DeleteCvComponent } from "./cvTech/delete-cv/delete-cv.component";
 import { DetailComponent } from "./cvTech/detail/detail.component";
 import { ErrorComponent } from "./cvTech/error/error.component";
+import { LoginComponent } from "./cvTech/login/login.component";
 
 const APP_ROUTING: Routes = [
   {
@@ -20,10 +21,10 @@ const APP_ROUTING: Routes = [
     ]
   },
   { path: '', component: CvComponent },
-
+  { path: 'color', component: ColorComponent },
+  { path: 'login', component: LoginComponent },
   { path: '**', component: ErrorComponent },
 
-  { path: 'color', component: ColorComponent }
 
 ]
 
