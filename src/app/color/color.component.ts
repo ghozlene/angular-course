@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirstServiceService } from '../first-service.service';
-import { Router } from "@angular/router"
+import { Router, ActivatedRoute } from "@angular/router"
 @Component({
   selector: 'app-color',
   templateUrl: './color.component.html',
@@ -12,9 +12,17 @@ export class ColorComponent implements OnInit {
 
 
   constructor(private fService: FirstServiceService,
-    private router: Router) { }
+    private router: Router,
+    private activateRoute: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    this.activateRoute.params.subscribe(
+      (params) => {
+        console.log(params)
+        this.color = params['default']
+      }
+    )
   }
 
   proccessReq(message: any) {
