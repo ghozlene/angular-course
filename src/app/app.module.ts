@@ -16,6 +16,7 @@ import { StylesComponent } from './directive/styles/styles.component';
 import { ClassComponent } from './directive/class/class.component';
 import { HighlightDirective } from './directive/highlight.directive';
 import { RainbowDirective } from './directive/rainbow.directive';
+import { DefaultPipePipe } from './cvTech/default-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RainbowDirective } from './directive/rainbow.directive';
     StylesComponent,
     ClassComponent,
     HighlightDirective,
-    RainbowDirective
+    RainbowDirective,
+    DefaultPipePipe
   ],
   imports: [
     BrowserModule, FormsModule

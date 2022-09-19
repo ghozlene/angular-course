@@ -6,11 +6,11 @@
           <img src="assets/images/rotating_card_thumb2.png">
         </div>
         <div class="user">
-          <img class="img-circle" src="assets/images/{{personne.path}}">
+          <img class="img-circle" src="assets/images/{{personne.path |defaultPipe}}">
         </div>
         <div class="content">
           <div class="main">
-            <h3 class="name">{{personne.firstName}} {{personne.name}}</h3>
+            <h3 class="name">{{personne.firstName | titlecase }} {{personne.name |titlecase}}</h3>
             <p class="profession">{{personne.job}}</p>
 
           </div>

@@ -1,6 +1,6 @@
 <li class="list-group-item" (click)="selectPerson()">
 
-  <img src="assets/images/{{personne.path}}" alt="{{personne.firstName}}" id="img1">
-  {{personne.firstName}} {{personne.name}}
+  <img src="assets/images/{{personne.path |defaultPipe}}" alt="{{personne.firstName }}" id="img1">
+  {{personne.firstName | titlecase }} {{personne.name | titlecase }}
 
 </li>
