@@ -22,6 +22,8 @@ import { ROUTING } from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { DetailComponent } from './cvTech/detail/detail.component';
+import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
+import { AddCvComponent } from './cvTech/add-cv/add-cv.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { DetailComponent } from './cvTech/detail/detail.component';
     HiringComponent,
     HeaderComponent,
     RouterSimulatorComponent,
-    DetailComponent
+    DetailComponent,
+    DeleteCvComponent,
+    AddCvComponent
   ],
   imports: [
     BrowserModule, FormsModule, ROUTING
