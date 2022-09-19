@@ -7,7 +7,7 @@ import { DetailComponent } from "./cvTech/detail/detail.component";
 
 const APP_ROUTING: Routes = [
   {
-    path: 'cv', children: [
+    path: 'cv', component: CvComponent, children: [
       { path: '', component: CvComponent },
 
       { path: 'delete/:id', component: DeleteCvComponent },
