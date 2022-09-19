@@ -4,6 +4,10 @@
   min-height: 900px;
 }
 
+.ng-invalid.ng-touched {
+  border-color: red;
+}
+
 @media (max-width: 991.98px) {
   .half .bg {
     height: 200px;
