@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { CvService } from '../cv.service';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-cv',
   templateUrl: './add-cv.component.html',
@@ -18,8 +18,8 @@ export class AddCvComponent implements OnInit {
 
   addPerson(form: NgForm) {
     const link = ['cv'];
-    this.cvService.addPersonne(form.value)
-    this.router.navigate(link)
+    this.cvService.addPersonne(form.value);
+    this.router.navigate(link);
 
   }
 }

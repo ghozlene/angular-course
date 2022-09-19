@@ -14,24 +14,24 @@ export class CvService {
       new Personne(1, 'ghozlene', 'achref', 25, 'rotating_card_profile3.png', 54140, 'dev'),
       new Personne(2, 'morgan', 'ahmed', 35, 'rotating_card_profile2.png', 254870, 'designer'),
       new Personne(3, 'ali', 'adta', 35, '', 32568, 'test'),
-    ]
+    ];
   }
   getPersonne(): Personne[] {
-    return this.personnes
+    return this.personnes;
   }
 
   getPersonById(id: number): Personne {
     const personne = this.personnes.find(person => {
 
-      return person.id == id
-    })
+      return person.id == id;
+    });
     return personne!;
   }
   addPersonne(personne: Personne): void {
-    console.log(personne)
-    personne.id = this.personnes.length
+    console.log(personne);
+    personne.id = this.personnes.length;
 
-    this.personnes.push(personne)
+    this.personnes.push(personne);
   }
 
 }

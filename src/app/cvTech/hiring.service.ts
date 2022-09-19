@@ -6,7 +6,7 @@ import { Personne } from '../model/Persone';
 })
 export class HiringService {
 
-  private personnes: Personne[]
+  private personnes: Personne[];
   constructor() {
 
     this.personnes = [];
@@ -16,18 +16,18 @@ export class HiringService {
     return this.personnes;
   }
   hiring(personne: Personne) {
-    const index = this.personnes.indexOf(personne)
+    const index = this.personnes.indexOf(personne);
     if (index < 0) {
-      this.personnes.push(personne)
+      this.personnes.push(personne);
     } else {
-      alert(`${personne.name} is already in`)
+      alert(`${personne.name} is already in`);
     }
 
   }
   fire(personne: Personne) {
-    const index = this.personnes.indexOf(personne)
+    const index = this.personnes.indexOf(personne);
     if (index >= 0) {
-      this.personnes.splice(index, 1)
+      this.personnes.splice(index, 1);
     }
   }
 }
