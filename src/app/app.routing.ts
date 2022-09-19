@@ -1,4 +1,4 @@
-import { Routes, RouterModule } from "@angular/router";
+import { Routes, RouterModule, Router } from "@angular/router";
 import { ColorComponent } from "./color/color.component";
 import { CvComponent } from "./cvTech/cv/cv.component";
 
