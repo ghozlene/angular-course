@@ -1,0 +1,6 @@
+<div *ngIf="personnes.length>0">
+  <span *ngFor="let personne of personnes">
+    <img class="imageHiring" src="assets/images/{{personne.path |defaultPipe}}" alt="{{personne.firstName }}" id="img1">
+    {{personne.firstName | titlecase }} {{personne.name | titlecase }}
+  </span>
+</div>
