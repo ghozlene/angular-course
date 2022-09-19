@@ -16,8 +16,6 @@ const APP_ROUTING: Routes = [
       { path: 'add', component: AddCvComponent },
       { path: ':id', component: DetailComponent },
 
-
-
     ]
   },
   { path: '', component: CvComponent },
