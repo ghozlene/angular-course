@@ -18,6 +18,7 @@ import { HighlightDirective } from './directive/highlight.directive';
 import { RainbowDirective } from './directive/rainbow.directive';
 import { DefaultPipePipe } from './cvTech/default-pipe.pipe';
 import { HiringComponent } from './cvTech/hiring/hiring.component';
+import { ROUTING } from './app.routing';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,7 @@ import { HiringComponent } from './cvTech/hiring/hiring.component';
     HiringComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule, FormsModule, ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]
