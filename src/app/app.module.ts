@@ -27,7 +27,8 @@ import { AddCvComponent } from './cvTech/add-cv/add-cv.component';
 import { ErrorComponent } from './cvTech/error/error.component';
 import { LoginComponent } from './cvTech/login/login.component';
 import { ObservableComponent } from './observable/observable.component';
-
+import { HttpComponent } from './http/http.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,10 +54,12 @@ import { ObservableComponent } from './observable/observable.component';
     AddCvComponent,
     ErrorComponent,
     LoginComponent,
-    ObservableComponent
+    ObservableComponent,
+    HttpComponent,
+
   ],
   imports: [
-    BrowserModule, FormsModule, ROUTING
+    BrowserModule, FormsModule, ROUTING, HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
