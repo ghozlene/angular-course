@@ -7,6 +7,8 @@ import { Personne } from '../model/Persone';
 export class CvService {
   private personnes: Personne[];
 
+
+
   constructor() {
     this.personnes = [
       new Personne(1, 'ghozlene', 'achref', 25, 'rotating_card_profile3.png', 54140, 'dev'),
@@ -17,4 +19,13 @@ export class CvService {
   getPersonne(): Personne[] {
     return this.personnes
   }
+
+  getPersonById(id: number): Personne {
+    const personne = this.personnes.find(person => {
+
+      return person.id == id
+    })
+    return personne!;
+  }
+
 }

@@ -21,6 +21,7 @@ import { HiringComponent } from './cvTech/hiring/hiring.component';
 import { ROUTING } from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
+import { DetailComponent } from './cvTech/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { RouterSimulatorComponent } from './router-simulator/router-simulator.co
     DefaultPipePipe,
     HiringComponent,
     HeaderComponent,
-    RouterSimulatorComponent
+    RouterSimulatorComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule, FormsModule, ROUTING
