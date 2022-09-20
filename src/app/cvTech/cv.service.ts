@@ -32,15 +32,18 @@ export class CvService {
     return this.personnes;
   }
 
-  getPersonById(id: number): Personne {
-    const personne = this.personnes.find(person => {
+  getPersonById(id: number): Observable<Personne> {
+    return this.http.get<Personne>(this.link + `/${id}`);
 
-      return person.id == id;
-    });
-    return personne!;
-  }
+
+  };
+
   addPersonne(personne: Personne): Observable<any> {
     return this.http.post(this.link, personne);
+  };
+
+  deletePerson(id): Observable<any> {
+    return this.http.delete(this.link + `/${id}`);
   }
 
 }
