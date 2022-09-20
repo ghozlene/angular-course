@@ -18,4 +18,8 @@ export class AthentificationService {
   logout() {
     localStorage.removeItem('token');
   }
+
+  isLogged() {
+    return !!localStorage.getItem('token');
+  }
 }

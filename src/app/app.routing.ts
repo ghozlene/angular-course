@@ -7,6 +7,7 @@ import { DetailComponent } from "./cvTech/detail/detail.component";
 import { ErrorComponent } from "./cvTech/error/error.component";
 import { LoginComponent } from "./cvTech/login/login.component";
 import { LoginGuard } from "./guard/login.guard";
+import { LogoutGuard } from "./guard/logout.guard";
 
 const APP_ROUTING: Routes = [
   {
@@ -21,7 +22,7 @@ const APP_ROUTING: Routes = [
   },
   { path: '', component: CvComponent },
   { path: 'color', component: ColorComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent, canActivate: [LogoutGuard] },
   { path: '**', component: ErrorComponent },
 
 
