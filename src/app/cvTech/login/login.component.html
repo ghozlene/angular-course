@@ -13,5 +13,5 @@
     the password need to be more then 4 caractere
 
   </div>
-  <button class=" btn-primary" (click)="login()" [disabled]="!loginForm.valid">logIn</button>
+  <button class=" btn-primary" [disabled]="!loginForm.valid" (click)="login(loginForm.value)">logIn</button>
 </form>
