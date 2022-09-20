@@ -15,4 +15,7 @@ export class AthentificationService {
     return this.http.post(this.link, credentials);
 
   }
+  logout() {
+    localStorage.removeItem('token');
+  }
 }
