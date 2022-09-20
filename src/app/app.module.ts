@@ -22,7 +22,7 @@ import { ROUTING } from './app.routing';
 import { HeaderComponent } from './header/header.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { DetailComponent } from './cvTech/detail/detail.component';
-import { DeleteCvComponent } from './cvTech/delete-cv/delete-cv.component';
+
 import { AddCvComponent } from './cvTech/add-cv/add-cv.component';
 import { ErrorComponent } from './cvTech/error/error.component';
 import { LoginComponent } from './cvTech/login/login.component';
@@ -32,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginInterceptorPorvider } from './interceptors/login.interceptor';
 import { LoginGuard } from './guard/login.guard';
 import { LogoutGuard } from './guard/logout.guard';
+import { UpdateCvComponent } from './cvTech/update-cv/update-cv.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -53,12 +54,13 @@ import { LogoutGuard } from './guard/logout.guard';
     HeaderComponent,
     RouterSimulatorComponent,
     DetailComponent,
-    DeleteCvComponent,
+
     AddCvComponent,
     ErrorComponent,
     LoginComponent,
     ObservableComponent,
     HttpComponent,
+    UpdateCvComponent,
 
   ],
   imports: [

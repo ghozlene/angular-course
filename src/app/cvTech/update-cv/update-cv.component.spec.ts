@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DeleteCvComponent } from './delete-cv.component';
+import { UpdateCvComponent } from './update-cv.component';
 
-describe('DeleteCvComponent', () => {
-  let component: DeleteCvComponent;
-  let fixture: ComponentFixture<DeleteCvComponent>;
+describe('UpdateCvComponent', () => {
+  let component: UpdateCvComponent;
+  let fixture: ComponentFixture<UpdateCvComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DeleteCvComponent ]
+      declarations: [ UpdateCvComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DeleteCvComponent);
+    fixture = TestBed.createComponent(UpdateCvComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
