@@ -7,6 +7,7 @@ import { AthentificationService } from '../athentification.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  visibility = false;
   public get authentificationService(): AthentificationService {
     return this._authentificationService;
   }
@@ -21,5 +22,9 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.authentificationService.logout();
+  }
+
+  show() {
+    this.visibility = !this.visibility;
   }
 }
