@@ -29,6 +29,7 @@ import { LoginComponent } from './cvTech/login/login.component';
 import { ObservableComponent } from './observable/observable.component';
 import { HttpComponent } from './http/http.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginInterceptorPorvider } from './interceptors/login.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +62,9 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule, FormsModule, ROUTING, HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    LoginInterceptorPorvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
