@@ -39,11 +39,8 @@ export class CvService {
     });
     return personne!;
   }
-  addPersonne(personne: Personne): void {
-    console.log(personne);
-    personne.id = this.personnes.length;
-
-    this.personnes.push(personne);
+  addPersonne(personne: Personne): Observable<any> {
+    return this.http.post(this.link, personne);
   }
 
 }

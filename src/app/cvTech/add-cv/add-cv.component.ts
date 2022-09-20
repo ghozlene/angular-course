@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-cv.component.css']
 })
 export class AddCvComponent implements OnInit {
-
+  errorMessage = '';
   constructor(private cvService: CvService,
     private router: Router
   ) { }
@@ -17,9 +17,16 @@ export class AddCvComponent implements OnInit {
   }
 
   addPerson(form: NgForm) {
-    const link = ['cv'];
-    this.cvService.addPersonne(form.value);
-    this.router.navigate(link);
+    this.cvService.addPersonne(form.value).subscribe({
+      next: (response) => {
+        const link = ['cv'];
+        this.router.navigate(link);
+      },
+      error: (error) => {
+        this.errorMessage = 'network problem check your network please';
+      }
+    });
+
 
   }
 }
