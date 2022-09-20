@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Personne } from 'src/app/model/Persone';
+import { CvService } from '../cv.service';
 
 @Component({
   selector: 'app-search',
@@ -8,17 +10,39 @@ import { Personne } from 'src/app/model/Persone';
 })
 export class SearchComponent implements OnInit {
   searchResult: Personne[];
-  constructor() { }
+  chaine = "";
+  constructor(
+    private cvService: CvService
+    , private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.searchResult = [];
   }
 
-  search(search) {
+  search() {
+    const name = this.chaine.trim();
+
+    if (name.length) {
+      this.cvService.findByName(name).subscribe({
+        next: (personnes) => {
+          console.log(personnes);
+          this.searchResult = personnes;
+        }
+      });
+
+    } else {
+      this.searchResult = [];
+    }
 
 
   }
   selectPerson(personne: Personne) {
-    console.log(personne);
+    const link = ['cv', personne.id];
+    this.router.navigate(link);
+    this.searchResult = [];
+    this.chaine = '';
+
   }
+
 }

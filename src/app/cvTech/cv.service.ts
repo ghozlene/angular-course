@@ -54,4 +54,9 @@ export class CvService {
     console.log(personne);
     return this.http.put(this.link, personne);
   }
+  findByName(name): Observable<any> {
+    const filter = `{"where":{"name":{"like":"%${name}%"}}}`;
+    const params = new HttpParams().set('filter', filter);
+    return this.http.get<Personne>(this.link, { params });
+  }
 }

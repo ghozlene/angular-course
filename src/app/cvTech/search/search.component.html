@@ -1,10 +1,10 @@
-<input type="text" #inputSearch class="form-control" (keyup)="search(inputSearch)">
+<input type="text" [(ngModel)]="chaine" class="form-control" (keyup)="search()">
 
-<ol>
-  <li *ngFor="let p of searchResult" class="list-group-item" (click)="selectPerson(personne)">
+<ol class="list-group">
+  <li *ngFor="let p of searchResult" class="list-group-item" (click)="selectPerson(p )">
 
-    <img src="assets/images/{{personne.path |defaultPipe}}" alt="{{personne.firstName }}" id="img1">
-    {{personne.firstName | titlecase }} {{personne.name | titlecase }}
+    <img src="assets/images/{{p.path |defaultPipe}}" alt="{{p.firstName }}" id="img1">
+    {{p.firstName | titlecase }} {{p.name | titlecase }}
 
   </li>
 
