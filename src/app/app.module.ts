@@ -33,6 +33,7 @@ import { LoginInterceptorPorvider } from './interceptors/login.interceptor';
 import { LoginGuard } from './guard/login.guard';
 import { LogoutGuard } from './guard/logout.guard';
 import { UpdateCvComponent } from './cvTech/update-cv/update-cv.component';
+import { SearchComponent } from './cvTech/search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,6 +62,7 @@ import { UpdateCvComponent } from './cvTech/update-cv/update-cv.component';
     ObservableComponent,
     HttpComponent,
     UpdateCvComponent,
+    SearchComponent,
 
   ],
   imports: [
