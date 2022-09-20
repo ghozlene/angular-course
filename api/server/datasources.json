@@ -7,9 +7,10 @@
     "host": "localhost",
     "port": "3306",
     "url": "",
+    "database": "anguformat",
     "password": "",
+    "name": "achrefdb",
     "user": "root",
-    "connector": "mysql",
-    "database": "anguformat"
+    "connector": "mysql"
   }
 }

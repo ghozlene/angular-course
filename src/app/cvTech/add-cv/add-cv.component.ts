@@ -23,7 +23,7 @@ export class AddCvComponent implements OnInit {
         this.router.navigate(link);
       },
       error: (error) => {
-        this.errorMessage = 'network problem check your network please';
+        console.log(error.message);
       }
     });
 

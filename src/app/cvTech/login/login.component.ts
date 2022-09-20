@@ -28,6 +28,9 @@ export class LoginComponent implements OnInit {
         const link = ["cv"];
         localStorage.setItem('token', token);
         this.router.navigate(link);
+      },
+      error: (err) => {
+        console.log(err);
       }
     });
   }
